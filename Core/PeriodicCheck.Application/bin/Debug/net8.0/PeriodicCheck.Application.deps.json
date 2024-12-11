@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PeriodicCheck.Application/1.0.0": {
+        "dependencies": {
+          "PeriodicCheck.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PeriodicCheck.Application.dll": {}
+        }
+      },
+      "PeriodicCheck.Domain/1.0.0": {
+        "runtime": {
+          "PeriodicCheck.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PeriodicCheck.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PeriodicCheck.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

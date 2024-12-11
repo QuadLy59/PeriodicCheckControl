@@ -1,0 +1,11 @@
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\bin\Debug\net8.0\PeriodicCheck.Domain.deps.json
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\bin\Debug\net8.0\PeriodicCheck.Domain.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\bin\Debug\net8.0\PeriodicCheck.Domain.pdb
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\refint\PeriodicCheck.Domain.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.pdb
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\ref\PeriodicCheck.Domain.dll

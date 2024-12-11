@@ -1,0 +1,15 @@
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\bin\Debug\net8.0\PeriodicCheck.Application.deps.json
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\bin\Debug\net8.0\PeriodicCheck.Application.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\bin\Debug\net8.0\PeriodicCheck.Application.pdb
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\bin\Debug\net8.0\PeriodicCheck.Domain.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\bin\Debug\net8.0\PeriodicCheck.Domain.pdb
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\Periodic.BABE9CDD.Up2Date
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\refint\PeriodicCheck.Application.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.pdb
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\ref\PeriodicCheck.Application.dll
