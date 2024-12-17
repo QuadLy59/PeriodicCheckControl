@@ -27,6 +27,7 @@ namespace PeriodicCheck.Domain.Entities
         public bool Is_active { get; set; } 
         public bool Is_deleted { get; set; }
         public Equipment Equipment { get; set; }
+        public Equipment Equipment2 { get; set; }
 
     }
 }
