@@ -2,8 +2,6 @@ using PeriodicCheck.Application.Features.CQRS.Handlers.CareHandlers;
 using PeriodicCheck.Application.Features.CQRS.Handlers.CategoryHandlers;
 using PeriodicCheck.Application.Features.CQRS.Handlers.EquipmentHandlers;
 using PeriodicCheck.Application.Features.CQRS.Handlers.FaultHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.NoticeHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.PeriodicActivityStatusHandlers;
 using PeriodicCheck.Application.Features.CQRS.Handlers.StockHandlers;
 using PeriodicCheck.Application.Features.CQRS.Handlers.WarehouseHandlers;
 using PeriodicCheck.Application.Interfaces;
@@ -41,12 +39,6 @@ builder.Services.AddScoped<CreateFaultCommandHandler>();
 builder.Services.AddScoped<UpdateFaultCommandHandler>();
 builder.Services.AddScoped<RemoveFaultCommandHandler>();
 
-builder.Services.AddScoped<GetNoticeQueryHandler>();
-builder.Services.AddScoped<GetNoticeByIdQueryHandler>();
-builder.Services.AddScoped<CreateNoticeCommandHandler>();
-builder.Services.AddScoped<UpdateNoticeCommandHandler>();
-builder.Services.AddScoped<RemoveNoticeCommandHandler>();
-
 builder.Services.AddScoped<GetStockQueryHandler>();
 builder.Services.AddScoped<GetStockByIdQueryHandler>();
 builder.Services.AddScoped<CreateStockCommandHandler>();
@@ -60,11 +52,6 @@ builder.Services.AddScoped<CreateWarehouseCommandHandler>();
 builder.Services.AddScoped<UpdateWarehouseCommandHandler>();
 builder.Services.AddScoped<RemoveWarehouseCommandHandler>();
 
-builder.Services.AddScoped<GetPeriodicActivityStatusQueryHandler>();
-builder.Services.AddScoped<GetPeriodicActivityStatusByIdQueryHandler>();
-builder.Services.AddScoped<CreatePeriodicActivityStatusCommandHandler>();
-builder.Services.AddScoped<UpdatePeriodicActivityStatusCommandHandler>();
-builder.Services.AddScoped<RemovePeriodicActivityStatusCommandHandler>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

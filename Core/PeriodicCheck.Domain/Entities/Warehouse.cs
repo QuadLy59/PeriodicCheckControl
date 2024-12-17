@@ -12,6 +12,7 @@ namespace PeriodicCheck.Domain.Entities
         [Key]
         public int Warehouse_id { get; set; }
         public string Warehouse_name { get; set; }
+        public int Equipment_id { get; set; }
         public List<Equipment> Equipments { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }

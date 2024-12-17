@@ -17,12 +17,11 @@ namespace PeriodicCheck.Persistence.Context
         public DbSet <Care> Cares { get; set; }
         public DbSet <Equipment> Equipments { get; set; }
         public DbSet <Fault> Faults { get; set; }
-        public DbSet <Notice> Notices { get; set; }
         public DbSet <Stock> Stocks { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Warehouse> Warehouses { get; set; }
         public DbSet<PeriodicActivityStatus> PeriodicActivityStatuses { get; set; }
-        public DbSet<FaultDescription> FaultDescriptions { get; set; }
+        public DbSet<FaultDetail> FaultDescriptions { get; set; }
         public DbSet<CareReport> CareReports { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -55,10 +54,6 @@ namespace PeriodicCheck.Persistence.Context
           .WithMany(e => e.Stocks)
           .HasForeignKey(s => s.Equipment_id);
 
-            modelBuilder.Entity<Notice>()
-          .HasOne(n => n.Equipment)
-           .WithMany(e => e.Notices)
-           .HasForeignKey(n => n.Equipment_id);
 
 
             modelBuilder.Entity<PeriodicActivityStatus>()
@@ -74,13 +69,13 @@ namespace PeriodicCheck.Persistence.Context
              .OnDelete(DeleteBehavior.NoAction);
 
 
-            modelBuilder.Entity<FaultDescription>()
+            modelBuilder.Entity<FaultDetail>()
      .HasOne(fd => fd.Fault)
      .WithMany(f => f.FaultDescriptions)
      .HasForeignKey(fd => fd.FaultId)
      .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<FaultDescription>()
+            modelBuilder.Entity<FaultDetail>()
                 .HasOne(fd => fd.Category)
                 .WithMany(c => c.FaultDescriptions) 
                 .HasForeignKey(fd => fd.CategoryId);

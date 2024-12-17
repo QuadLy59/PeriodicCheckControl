@@ -12,11 +12,12 @@ namespace PeriodicCheck.Domain.Entities
         [Key]
         public int Care_id { get; set; }
         public int Equipment_id { get; set; }
-        public Equipment Equipment { get; set; }
         public DateTime Care_date { get; set; }
         public string Techinician { get; set; }
-        public string Care_report { get; set; }
-        public DateTime next_care { get; set; }
+        public DateTime Next_Care_Date { get; set; }
+        public DateTime Previ_Care_Date { get; set; }
+        public string Control_Type { get; set; }
+        public string Care_Description { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
         public int? Updated_user { get; set; }
@@ -24,7 +25,8 @@ namespace PeriodicCheck.Domain.Entities
         public int? Deleted_user { get; set; }
         public DateTime? Deleted_date { get; set; }
         public bool Is_active { get; set; } 
-        public bool Is_deleted { get; set; } 
+        public bool Is_deleted { get; set; }
+        public Equipment Equipment { get; set; }
 
     }
 }

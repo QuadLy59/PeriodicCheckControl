@@ -15,11 +15,13 @@ namespace PeriodicCheck.Domain.Entities
         public string Serial_no { get; set; }
         public string Company { get; set; }
         public int Warehouse_id { get; set; }
-        public Warehouse Warehouse { get; set; }
         public string Responsible { get; set; }
-        public string Communication { get; set; }
+        public string Responsible_Communication { get; set; }
+        public bool Shift_Turn { get; set; }
         public int Category_id { get; set; }
-        public Category Category { get; set; }
+        public int Care_id { get; set; }
+        public int Stock_id { get; set; }
+        public int Fault_id { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
         public int? Updated_user { get; set; }
@@ -28,11 +30,11 @@ namespace PeriodicCheck.Domain.Entities
         public DateTime? Deleted_date { get; set; }
         public bool Is_active { get; set; }
         public bool Is_deleted { get; set; }
+        public Category Category { get; set; }
+        public Warehouse Warehouse { get; set; }
         public List<Fault> Faults { get; set; }
         public List<Care> Cares { get; set; }
         public List<Stock> Stocks { get; set; }
-        public List<Notice> Notices { get; set; }
-        public List<PeriodicActivityStatus> periodicActivityStatuses { get; set; }
-        public List<FaultDescription> FaultDescriptions { get; set; }
+        public List<FaultDetail> FaultDescriptions { get; set; }
     }
 }

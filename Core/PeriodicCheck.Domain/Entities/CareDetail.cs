@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace PeriodicCheck.Domain.Entities
 {
-    public class Stock
+    public class CareDetail
     {
         [Key]
-        public int Stock_id { get; set; }
-        public int Equipment_id { get; set; }
-        public int Category_id { get; set; }
-        public Category Category { get; set; }
-        public Equipment Equipment { get; set; }
+        public int Care_Detail_id { get; set; }
+        public int Care_id { get; set; }
+        public Care Care { get; set; }
+        public string Care_Name { get; set; }
+        public string Selected_Care { get; set; }
+        public byte Care_Photo { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
         public int? Updated_user { get; set; }
@@ -23,6 +24,6 @@ namespace PeriodicCheck.Domain.Entities
         public DateTime? Deleted_date { get; set; }
         public bool Is_active { get; set; }
         public bool Is_deleted { get; set; }
-
+        public Material Material { get; set; }
     }
 }

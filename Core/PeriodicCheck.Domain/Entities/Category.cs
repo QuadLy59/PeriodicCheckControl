@@ -12,9 +12,11 @@ namespace PeriodicCheck.Domain.Entities
         [Key]
         public int Category_id { get; set; }
         public string Category_name { get; set; }
+        public int Care_id { get; set; }
+        public List<Care> Cares { get; set; } 
         public List<Equipment> Equipments { get; set; }
         public List<Fault> Faults { get; set; }
-        public List<FaultDescription> FaultDescriptions { get; set; }
+        public List<FaultDetail> FaultDescriptions { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
         public int? Updated_user { get; set; }
