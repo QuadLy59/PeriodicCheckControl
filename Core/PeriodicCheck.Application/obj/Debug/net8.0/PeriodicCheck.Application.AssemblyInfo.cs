@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PeriodicCheck.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad4d33a538ec75cad36a97d3c89bb102629d2aff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("PeriodicCheck.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PeriodicCheck.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
