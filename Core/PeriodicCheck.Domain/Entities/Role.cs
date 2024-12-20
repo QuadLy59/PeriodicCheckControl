@@ -10,7 +10,7 @@ namespace PeriodicCheck.Domain.Entities
     public class Role
     {
         [Key]
-        public int Role_id { get; set; }
+        public int RoleId { get; set; }
         public string Role_Name { get; set; }
         public string Description { get; set; }
         public int? Ins_user { get; set; }
@@ -21,5 +21,7 @@ namespace PeriodicCheck.Domain.Entities
         public DateTime? Deleted_date { get; set; }
         public bool Is_active { get; set; }
         public bool Is_deleted { get; set; }
+        public List<User> Users { get; set; }
+        public List<RoleAuthority> RoleAuthorities { get; set; }
     }
 }

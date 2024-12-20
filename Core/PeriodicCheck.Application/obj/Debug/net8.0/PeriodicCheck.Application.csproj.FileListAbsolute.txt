@@ -13,3 +13,5 @@ C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application
 C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\refint\PeriodicCheck.Application.dll
 C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.pdb
 C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\ref\PeriodicCheck.Application.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\bin\Debug\net8.0\PeriodicCheck.Application.runtimeconfig.json
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Application\obj\Debug\net8.0\PeriodicCheck.Application.genruntimeconfig.cache

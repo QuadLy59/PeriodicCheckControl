@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PeriodicCheck.Application.Features.CQRS.Commands.CareCommands;
-using PeriodicCheck.Application.Features.CQRS.Handlers.CareHandlers;
+using PeriodicCheck.Application.Features.CQRS.Command.CareCommand;
+using PeriodicCheck.Application.Features.CQRS.Handler.CareHandler;
 using PeriodicCheck.Application.Features.CQRS.Queries.CareQueries;
 
 namespace PeriodicCheck.WebApi.Controllers
@@ -10,20 +10,21 @@ namespace PeriodicCheck.WebApi.Controllers
     [ApiController]
     public class CareController : ControllerBase
     {
-        private readonly CreateCareCommandHandler _createCommandHandler;
+        private readonly CreateCareCommandHandler _createCareCommandHandler;
         private readonly GetCareByIdQueryHandler _getCareByIdQueryHandler;
         private readonly GetCareQueryHandler _getCareQueryHandler;
-        private readonly UpdateCareCommandHandler _updateCommandHandler;
-        private readonly RemoveCareCommandHandler _removeCommandHandler;
-
-        public CareController(CreateCareCommandHandler createCommandHandler, GetCareByIdQueryHandler getCareByIdQueryHandler, GetCareQueryHandler getCareQueryHandler, UpdateCareCommandHandler updateCommandHandler, RemoveCareCommandHandler removeCommandHandler)
+        private readonly UpdateCareCommandHandler _updateCareCommandHandler;
+        private readonly RemoveCareCommandHandler _removeCareCommandHandler;
+        public CareController(CreateCareCommandHandler createCareCommandHandler, GetCareByIdQueryHandler getCareByIdQueryHandler, GetCareQueryHandler getCareQueryHandler, UpdateCareCommandHandler updateCareCommandHandler, RemoveCareCommandHandler removeCareCommandHandler)
         {
-            _createCommandHandler = createCommandHandler;
+            _createCareCommandHandler = createCareCommandHandler;
             _getCareByIdQueryHandler = getCareByIdQueryHandler;
             _getCareQueryHandler = getCareQueryHandler;
-            _updateCommandHandler = updateCommandHandler;
-            _removeCommandHandler = removeCommandHandler;
+            _updateCareCommandHandler = updateCareCommandHandler;
+            _removeCareCommandHandler = removeCareCommandHandler;
         }
+
+
         [HttpGet]
         public async Task<IActionResult> CareList()
         {
@@ -39,20 +40,20 @@ namespace PeriodicCheck.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCare(CreateCareCommand command)
         {
-            await _createCommandHandler.Handle(command);
-            return Ok("Bakım Bilgisi Eklendi");
+            await _createCareCommandHandler.Handle(command);
+            return Ok("Bilgi Eklendi");
         }
         [HttpDelete]
         public async Task<IActionResult> RemoveCare(int id)
         {
-            await _removeCommandHandler.Handle(new RemoveCareCommand(id));
-            return Ok("Bakım Bilgisi Silindi");
+            await _removeCareCommandHandler.Handle(new RemoveCareCommand(id));
+            return Ok("Bilgi Silindi");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateCare(UpdateCareCommand command)
         {
-            await _updateCommandHandler.Handle(command);
-            return Ok("Bakım Bilgisi Güncellendi");
+            await _updateCareCommandHandler.Handle(command);
+            return Ok("Bilgi Eklendi");
         }
     }
 }

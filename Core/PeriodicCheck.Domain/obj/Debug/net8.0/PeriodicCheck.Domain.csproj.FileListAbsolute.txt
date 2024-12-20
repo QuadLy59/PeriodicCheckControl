@@ -9,3 +9,6 @@ C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\
 C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\refint\PeriodicCheck.Domain.dll
 C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.pdb
 C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\ref\PeriodicCheck.Domain.dll
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\bin\Debug\net8.0\PeriodicCheck.Domain.runtimeconfig.json
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\PeriodicCheck\Core\PeriodicCheck.Domain\obj\Debug\net8.0\PeriodicCheck.Domain.genruntimeconfig.cache

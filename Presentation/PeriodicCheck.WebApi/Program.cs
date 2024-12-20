@@ -1,9 +1,5 @@
-using PeriodicCheck.Application.Features.CQRS.Handlers.CareHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.CategoryHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.EquipmentHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.FaultHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.StockHandlers;
-using PeriodicCheck.Application.Features.CQRS.Handlers.WarehouseHandlers;
+using PeriodicCheck.Application.Features.CQRS.Handler.AuthorityHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.CareHandler;
 using PeriodicCheck.Application.Interfaces;
 using PeriodicCheck.Persistence.Context;
 using PeriodicCheck.Persistence.Repositories;
@@ -15,43 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<PeriodicCheckContext>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+builder.Services.AddScoped<GetAuthorityQueryHandler>();
+builder.Services.AddScoped<GetAuthorityByIdQueryHandler>();
+builder.Services.AddScoped<CreateAuthorityCommandHandler>();
+builder.Services.AddScoped<UpdateAuthorityCommandHandler>();
+builder.Services.AddScoped<RemoveAuthorityCommandHandler>();
+
 builder.Services.AddScoped<GetCareQueryHandler>();
 builder.Services.AddScoped<GetCareByIdQueryHandler>();
 builder.Services.AddScoped<CreateCareCommandHandler>();
 builder.Services.AddScoped<RemoveCareCommandHandler>();
 builder.Services.AddScoped<UpdateCareCommandHandler>();
-
-builder.Services.AddScoped<GetEquipmentQueryHandler>();
-builder.Services.AddScoped<GetEquipmentByIdQueryHandler>();
-builder.Services.AddScoped<CreateEquipmentCommandHandler>();
-builder.Services.AddScoped<RemoveEquipmentCommandHandler>();
-builder.Services.AddScoped<UpdateEquipmentCommandHandler>();
-
-builder.Services.AddScoped<GetCategoryQueryHandler>();
-builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
-builder.Services.AddScoped<CreateCategoryCommandHandler>();
-builder.Services.AddScoped<UpdateCategoryCommandHandler>();
-builder.Services.AddScoped<RemoveCategoryCommandHandler>();
-
-builder.Services.AddScoped<GetFaultQueryHandler>();
-builder.Services.AddScoped<GetFaultByIdQueryHandler>();
-builder.Services.AddScoped<CreateFaultCommandHandler>();
-builder.Services.AddScoped<UpdateFaultCommandHandler>();
-builder.Services.AddScoped<RemoveFaultCommandHandler>();
-
-builder.Services.AddScoped<GetStockQueryHandler>();
-builder.Services.AddScoped<GetStockByIdQueryHandler>();
-builder.Services.AddScoped<CreateStockCommandHandler>();
-builder.Services.AddScoped<UpdateStockCommandHandler>();
-builder.Services.AddScoped<RemoveStockCommandHandler>();
-
-
-builder.Services.AddScoped<GetWarehouseQueryHandler>();
-builder.Services.AddScoped<GetWarehouseByIdQueryHandler>();
-builder.Services.AddScoped<CreateWarehouseCommandHandler>();
-builder.Services.AddScoped<UpdateWarehouseCommandHandler>();
-builder.Services.AddScoped<RemoveWarehouseCommandHandler>();
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

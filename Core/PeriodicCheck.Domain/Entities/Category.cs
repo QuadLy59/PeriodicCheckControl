@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +11,12 @@ namespace PeriodicCheck.Domain.Entities
     public class Category
     {
         [Key]
-        public int Category_id { get; set; }
-        public string Category_name { get; set; }
-        public int Care_id { get; set; }
-        public List<Care> Cares { get; set; } 
-        public List<Equipment> Equipments { get; set; }
-        public List<Fault> Faults { get; set; }
-        public List<FaultDetail> FaultDescriptions { get; set; }
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        
+        public int EquipmentId { get; set; }
+        public int CareId { get; set; }
+        public Care Care { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
         public int? Updated_user { get; set; }
@@ -25,5 +25,9 @@ namespace PeriodicCheck.Domain.Entities
         public DateTime? Deleted_date { get; set; }
         public bool Is_active { get; set; }
         public bool Is_deleted { get; set; }
+        public List<FaultDetail> FaultDetails { get; set; }
+        public List<Stock> Stocks { get; set; }
+        public List<Equipment> Equipment { get; set; }
+        public List<CareReport> CareReports { get; set; }
     }
 }

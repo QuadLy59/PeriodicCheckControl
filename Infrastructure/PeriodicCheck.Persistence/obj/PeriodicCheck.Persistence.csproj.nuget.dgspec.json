@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {}
+    "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
         "projectName": "PeriodicCheck.Application",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
               }
             }
           }
@@ -48,6 +48,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -68,14 +80,14 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
         "projectName": "PeriodicCheck.Domain",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -108,6 +120,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -128,14 +152,14 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
         "projectName": "PeriodicCheck.Persistence",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Infrastructure\\PeriodicCheck.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -152,11 +176,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj"
               },
-              "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\PeriodicCheck\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
               }
             }
           }
@@ -178,17 +202,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
