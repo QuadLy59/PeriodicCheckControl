@@ -146,5 +146,79 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Role/CreateRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "SurveySystem.Application.Features.CQRS.Commands.RoleCommands.CreateRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "Method": "GetRole",
+    "RelativePath": "api/Role/GetRole/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "Method": "RemoveRole",
+    "RelativePath": "api/Role/RemoveRole",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "Method": "RoleList",
+    "RelativePath": "api/Role/RoleList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "Method": "UpdateRole",
+    "RelativePath": "api/Role/UpdateRole",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "SurveySystem.Application.Features.CQRS.Commands.RoleCommands.UpdateRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

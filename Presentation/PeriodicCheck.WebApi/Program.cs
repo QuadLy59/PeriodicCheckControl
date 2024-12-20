@@ -3,6 +3,7 @@ using PeriodicCheck.Application.Features.CQRS.Handler.CareHandler;
 using PeriodicCheck.Application.Interfaces;
 using PeriodicCheck.Persistence.Context;
 using PeriodicCheck.Persistence.Repositories;
+using SurveySystem.Application.Features.CQRS.Handlers.RoleHandlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,13 @@ builder.Services.AddScoped<GetCareByIdQueryHandler>();
 builder.Services.AddScoped<CreateCareCommandHandler>();
 builder.Services.AddScoped<RemoveCareCommandHandler>();
 builder.Services.AddScoped<UpdateCareCommandHandler>();
+
+builder.Services.AddScoped<GetRoleQueryHandler>();
+builder.Services.AddScoped<GetRoleByIdQueryHandler>();
+builder.Services.AddScoped<CreateRoleCommandHandler>();
+builder.Services.AddScoped<RemoveRoleCommandHandler>();
+builder.Services.AddScoped<UpdateRoleCommandHandler>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
