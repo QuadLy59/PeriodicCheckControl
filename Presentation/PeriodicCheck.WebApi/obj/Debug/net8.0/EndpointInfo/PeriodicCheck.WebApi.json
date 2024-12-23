@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Authority": {
+    "/api/Authority/AuthorityList": {
       "get": {
         "tags": [
           "Authority"
@@ -15,7 +15,32 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Authority/GetAuthority/{id}": {
+      "get": {
+        "tags": [
+          "Authority"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Authority/CreateAuthority": {
       "post": {
         "tags": [
           "Authority"
@@ -44,7 +69,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Authority/RemoveAuthority": {
       "delete": {
         "tags": [
           "Authority"
@@ -64,7 +91,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Authority/UpdateAuthority": {
       "put": {
         "tags": [
           "Authority"
@@ -95,10 +124,22 @@
         }
       }
     },
-    "/api/Authority/{id}": {
+    "/api/Care/CareList": {
       "get": {
         "tags": [
-          "Authority"
+          "Care"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Care/GetCare/{id}": {
+      "get": {
+        "tags": [
+          "Care"
         ],
         "parameters": [
           {
@@ -118,17 +159,7 @@
         }
       }
     },
-    "/api/Care": {
-      "get": {
-        "tags": [
-          "Care"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      },
+    "/api/Care/CreateCare": {
       "post": {
         "tags": [
           "Care"
@@ -157,7 +188,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Care/RemoveCare": {
       "delete": {
         "tags": [
           "Care"
@@ -177,7 +210,9 @@
             "description": "Success"
           }
         }
-      },
+      }
+    },
+    "/api/Care/UpdateCare": {
       "put": {
         "tags": [
           "Care"
@@ -208,10 +243,22 @@
         }
       }
     },
-    "/api/Care/{id}": {
+    "/api/CareDetail/CareDetailList": {
       "get": {
         "tags": [
-          "Care"
+          "CareDetail"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareDetail/GetCareDetail/{id}": {
+      "get": {
+        "tags": [
+          "CareDetail"
         ],
         "parameters": [
           {
@@ -224,6 +271,447 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareDetail/CreateCareDetail": {
+      "post": {
+        "tags": [
+          "CareDetail"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCareDetailCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCareDetailCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCareDetailCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareDetail/RemoveCareDetail": {
+      "delete": {
+        "tags": [
+          "CareDetail"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareDetail/UpdateCareDetail": {
+      "put": {
+        "tags": [
+          "CareDetail"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCareDetailCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCareDetailCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCareDetailCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareReport/CareReportList": {
+      "get": {
+        "tags": [
+          "CareReport"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareReport/GetCareReport/{id}": {
+      "get": {
+        "tags": [
+          "CareReport"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareReport/CreateCareReport": {
+      "post": {
+        "tags": [
+          "CareReport"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCareReportCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCareReportCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCareReportCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareReport/RemoveCareReport": {
+      "delete": {
+        "tags": [
+          "CareReport"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/CareReport/UpdateCareReport": {
+      "put": {
+        "tags": [
+          "CareReport"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCareReportCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCareReportCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCareReportCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category/CategoryList": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category/GetCategory/{id}": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category/CreateCategory": {
+      "post": {
+        "tags": [
+          "Category"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category/RemoveCategory": {
+      "delete": {
+        "tags": [
+          "Category"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Category/UpdateCategory": {
+      "put": {
+        "tags": [
+          "Category"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Equipment/EquipmentList": {
+      "get": {
+        "tags": [
+          "Equipment"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Equipment/GetEquipment/{id}": {
+      "get": {
+        "tags": [
+          "Equipment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Equipment/CreateEquipment": {
+      "post": {
+        "tags": [
+          "Equipment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEquipmentCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEquipmentCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateEquipmentCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Equipment/RemoveEquipment": {
+      "delete": {
+        "tags": [
+          "Equipment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Equipment/UpdateEquipment": {
+      "put": {
+        "tags": [
+          "Equipment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEquipmentCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEquipmentCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateEquipmentCommand"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -339,6 +827,245 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/UpdateRoleCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/UserList": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/GetUser/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/CreateUser": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/RemoveUser": {
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/User/UpdateUser": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Warehouse/WarehouseList": {
+      "get": {
+        "tags": [
+          "Warehouse"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Warehouse/GetWarehouse/{id}": {
+      "get": {
+        "tags": [
+          "Warehouse"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Warehouse/CreateWarehouse": {
+      "post": {
+        "tags": [
+          "Warehouse"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWarehouseCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWarehouseCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateWarehouseCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Warehouse/RemoveWarehouse/{id}": {
+      "delete": {
+        "tags": [
+          "Warehouse"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Warehouse/UpdateWarehouse": {
+      "put": {
+        "tags": [
+          "Warehouse"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWarehouseCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWarehouseCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateWarehouseCommand"
               }
             }
           }
@@ -473,6 +1200,200 @@
         },
         "additionalProperties": false
       },
+      "CreateCareDetailCommand": {
+        "type": "object",
+        "properties": {
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "materialId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "care_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "selected_Care": {
+            "type": "string",
+            "nullable": true
+          },
+          "care_Photo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCareReportCommand": {
+        "type": "object",
+        "properties": {
+          "careReportDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "materialId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deleted_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "deleted_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "is_deleted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCategoryCommand": {
+        "type": "object",
+        "properties": {
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateEquipmentCommand": {
+        "type": "object",
+        "properties": {
+          "equipment_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial_No": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "warehouseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responsible": {
+            "type": "string",
+            "nullable": true
+          },
+          "responsible_Communication": {
+            "type": "string",
+            "nullable": true
+          },
+          "shift_Turn": {
+            "type": "boolean"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "faultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateRoleCommand": {
         "type": "object",
         "properties": {
@@ -493,6 +1414,93 @@
             "format": "date-time"
           },
           "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserCommand": {
+        "type": "object",
+        "properties": {
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name_And_Surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone_Number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateWarehouseCommand": {
+        "type": "object",
+        "properties": {
+          "warehouse_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deleted_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "deleted_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "is_deleted": {
             "type": "boolean"
           }
         },
@@ -626,6 +1634,193 @@
         },
         "additionalProperties": false
       },
+      "UpdateCareDetailCommand": {
+        "type": "object",
+        "properties": {
+          "care_DetailId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "materialId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "care_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "selected_Care": {
+            "type": "string",
+            "nullable": true
+          },
+          "care_Photo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCareReportCommand": {
+        "type": "object",
+        "properties": {
+          "careReportId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "careReportDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "materialId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCategoryCommand": {
+        "type": "object",
+        "properties": {
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateEquipmentCommand": {
+        "type": "object",
+        "properties": {
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipment_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial_No": {
+            "type": "string",
+            "nullable": true
+          },
+          "company": {
+            "type": "string",
+            "nullable": true
+          },
+          "warehouseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responsible": {
+            "type": "string",
+            "nullable": true
+          },
+          "responsible_Communication": {
+            "type": "string",
+            "nullable": true
+          },
+          "shift_Turn": {
+            "type": "boolean"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "faultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "UpdateRoleCommand": {
         "type": "object",
         "properties": {
@@ -652,6 +1847,103 @@
             "nullable": true
           },
           "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateUserCommand": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name_And_Surname": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone_Number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateWarehouseCommand": {
+        "type": "object",
+        "properties": {
+          "warehouseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "warehouse_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deleted_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "deleted_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "is_deleted": {
             "type": "boolean"
           }
         },

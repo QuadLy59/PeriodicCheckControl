@@ -590,5 +590,79 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.WarehouseController",
+    "Method": "CreateWarehouse",
+    "RelativePath": "api/Warehouse/CreateWarehouse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.WarehouseCommand.CreateWarehouseCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.WarehouseController",
+    "Method": "GetWarehouse",
+    "RelativePath": "api/Warehouse/GetWarehouse/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.WarehouseController",
+    "Method": "RemoveWarehouse",
+    "RelativePath": "api/Warehouse/RemoveWarehouse/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.WarehouseController",
+    "Method": "UpdateWarehouse",
+    "RelativePath": "api/Warehouse/UpdateWarehouse",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.WarehouseCommand.UpdateWarehouseCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.WarehouseController",
+    "Method": "WarehouseList",
+    "RelativePath": "api/Warehouse/WarehouseList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

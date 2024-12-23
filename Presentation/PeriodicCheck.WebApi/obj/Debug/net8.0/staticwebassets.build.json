@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "Rl0IU7bXExSvJuSxN+dufdow5l1VAMSRj/hdnX4LTrE=",
+  "Hash": "/dEuua1UntbKQ2GCmvKU/X6VX7vLHBiLr3zXo2NiQS8=",
   "Source": "PeriodicCheck.WebApi",
   "BasePath": "_content/PeriodicCheck.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

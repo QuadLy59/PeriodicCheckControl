@@ -6,6 +6,7 @@ using PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.EquipmentHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.RoleHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.UserHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.WarehouseHandler;
 using PeriodicCheck.Application.Interfaces;
 using PeriodicCheck.Persistence.Context;
 using PeriodicCheck.Persistence.Repositories;
@@ -75,6 +76,13 @@ builder.Services.AddScoped<GetEquipmentByIdQueryHandler>();
 builder.Services.AddScoped<CreateEquipmentCommandHandler>();
 builder.Services.AddScoped<RemoveEquipmentCommandHandler>();
 builder.Services.AddScoped<UpdateEquipmentCommandHandler>();
+
+
+builder.Services.AddScoped<GetWarehouseQueryHandler>();
+builder.Services.AddScoped<GetWarehouseByIdQueryHandler>();
+builder.Services.AddScoped<CreateWarehouseCommandHandler>();
+builder.Services.AddScoped<RemoveWarehouseCommandHandler>();
+builder.Services.AddScoped<UpdateWarehouseCommandHandler>();
 
 
 

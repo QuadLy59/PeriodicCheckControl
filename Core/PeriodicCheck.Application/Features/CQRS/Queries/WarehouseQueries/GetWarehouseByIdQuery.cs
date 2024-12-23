@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SurveySystem.Application.Features.CQRS.Commands.RoleCommands
+namespace PeriodicCheck.Application.Features.CQRS.Queries.AuthorityQueries
 {
-    public class RemoveRoleCommand
+    public class GetWarehouseByIdQuery
     {
         public int Id { get; set; }
 
-        public RemoveRoleCommand(int id)
+        public GetWarehouseByIdQuery(int id)
         {
             Id = id;
         }
