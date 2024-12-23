@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\PeriodicCheckControl\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F5BA7B4-44E8-40D1-97D1-E1C138FD8590}|Presentation\\PeriodicCheck.WebApi\\PeriodicCheck.WebApi.csproj|c:\\periodiccheckcontrol\\presentation\\periodiccheck.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5F5BA7B4-44E8-40D1-97D1-E1C138FD8590}|Presentation\\PeriodicCheck.WebApi\\PeriodicCheck.WebApi.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\presentation\\periodiccheck.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F5BA7B4-44E8-40D1-97D1-E1C138FD8590}|Presentation\\PeriodicCheck.WebApi\\PeriodicCheck.WebApi.csproj|solutionrelative:presentation\\periodiccheck.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\command\\rolecommands\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\command\\rolecommands\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F5BA7B4-44E8-40D1-97D1-E1C138FD8590}|Presentation\\PeriodicCheck.WebApi\\PeriodicCheck.WebApi.csproj|c:\\periodiccheckcontrol\\presentation\\periodiccheck.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5F5BA7B4-44E8-40D1-97D1-E1C138FD8590}|Presentation\\PeriodicCheck.WebApi\\PeriodicCheck.WebApi.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\presentation\\periodiccheck.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F5BA7B4-44E8-40D1-97D1-E1C138FD8590}|Presentation\\PeriodicCheck.WebApi\\PeriodicCheck.WebApi.csproj|solutionrelative:presentation\\periodiccheck.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\updaterolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\updaterolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolebyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolebyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolebyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\removerolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\updaterolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\updaterolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\removerolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\removerolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\handler\\rolehandlers\\getrolequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|c:\\users\\administrator\\documents\\github\\periodiccheckcontrol\\core\\periodiccheck.application\\features\\cqrs\\command\\rolecommands\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612D387C-1861-48AB-94A4-C4548CFA6E64}|Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj|solutionrelative:core\\periodiccheck.application\\features\\cqrs\\command\\rolecommands\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,39 +50,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "CreateRoleCommand.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Command\\RoleCommands\\CreateRoleCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Command\\RoleCommands\\CreateRoleCommand.cs",
               "RelativeDocumentMoniker": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Command\\RoleCommands\\CreateRoleCommand.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Command\\RoleCommands\\CreateRoleCommand.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Command\\RoleCommands\\CreateRoleCommand.cs",
               "RelativeToolTip": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Command\\RoleCommands\\CreateRoleCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:39:19.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T14:39:19.104Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\PeriodicCheck.WebApi\\Program.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Program.cs",
               "RelativeToolTip": "Presentation\\PeriodicCheck.WebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T14:13:20.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-20T14:13:20.656Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Controllers\\RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "Presentation\\PeriodicCheck.WebApi\\Controllers\\RoleController.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Presentation\\PeriodicCheck.WebApi\\Controllers\\RoleController.cs",
               "RelativeToolTip": "Presentation\\PeriodicCheck.WebApi\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T14:13:02.714Z",
               "EditorCaption": ""
@@ -91,47 +89,47 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "UpdateRoleCommandHandler.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\UpdateRoleCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\UpdateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\UpdateRoleCommandHandler.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\UpdateRoleCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\UpdateRoleCommandHandler.cs",
               "RelativeToolTip": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\UpdateRoleCommandHandler.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T14:11:18.558Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "RemoveRoleCommandHandler.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\RemoveRoleCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\RemoveRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\RemoveRoleCommandHandler.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\RemoveRoleCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\RemoveRoleCommandHandler.cs",
               "RelativeToolTip": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\RemoveRoleCommandHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwAcAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T14:10:52.073Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "GetRoleByIdQueryHandler.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleByIdQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleByIdQueryHandler.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleByIdQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleByIdQueryHandler.cs",
               "RelativeToolTip": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleByIdQueryHandler.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T14:08:53.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GetRoleQueryHandler.cs",
-              "DocumentMoniker": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleQueryHandler.cs",
               "RelativeDocumentMoniker": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleQueryHandler.cs",
-              "ToolTip": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleQueryHandler.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleQueryHandler.cs",
               "RelativeToolTip": "Core\\PeriodicCheck.Application\\Features\\CQRS\\Handler\\RoleHandlers\\GetRoleQueryHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T14:08:38.283Z"
             }

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SurveySystem.Application.Features.CQRS.Commands.RoleCommands;
-using SurveySystem.Application.Features.CQRS.Handlers.RoleHandlers;
-using SurveySystem.Application.Features.CQRS.Queries.RoleQueries;
+using PeriodicCheck.Application.Features.CQRS.Command.RoleCommand;
+using PeriodicCheck.Application.Features.CQRS.Handler.RoleHandler;
+using PeriodicCheck.Application.Features.CQRS.Queries.RoleQueries;
 
-namespace SurveySystem.WebApi.Controllers
+namespace PeriodicCheck.WebApi.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

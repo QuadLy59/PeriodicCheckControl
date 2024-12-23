@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {}
+    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
+    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
         "projectName": "PeriodicCheck.Application",
-        "projectPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
-        "packagesPath": "C:\\Users\\oy126\\.nuget\\packages\\",
-        "outputPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\oy126\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
-                "projectPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
+              "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
               }
             }
           }
@@ -47,8 +43,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -81,25 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
+    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
         "projectName": "PeriodicCheck.Domain",
-        "projectPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
-        "packagesPath": "C:\\Users\\oy126\\.nuget\\packages\\",
-        "outputPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\oy126\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,8 +115,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -158,25 +148,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {
+    "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
         "projectName": "PeriodicCheck.Persistence",
-        "projectPath": "C:\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
-        "packagesPath": "C:\\Users\\oy126\\.nuget\\packages\\",
-        "outputPath": "C:\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\PeriodicCheck.Persistence.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Infrastructure\\PeriodicCheck.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\oy126\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -190,11 +176,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
-                "projectPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj"
+              "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Application\\PeriodicCheck.Application.csproj"
               },
-              "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
-                "projectPath": "C:\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
+              "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\PeriodicCheckControl\\Core\\PeriodicCheck.Domain\\PeriodicCheck.Domain.csproj"
               }
             }
           }
@@ -208,8 +194,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -252,7 +237,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

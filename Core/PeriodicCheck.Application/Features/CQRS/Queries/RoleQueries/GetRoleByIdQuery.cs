@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SurveySystem.Application.Features.CQRS.Queries.RoleQueries
+namespace PeriodicCheck.Application.Features.CQRS.Queries.RoleQueries
 {
     public class GetRoleByIdQuery
     {

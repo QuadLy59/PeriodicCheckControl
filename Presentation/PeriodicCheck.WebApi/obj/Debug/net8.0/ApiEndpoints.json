@@ -2,7 +2,7 @@
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.AuthorityController",
     "Method": "AuthorityList",
-    "RelativePath": "api/Authority",
+    "RelativePath": "api/Authority/AuthorityList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +12,7 @@
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.AuthorityController",
     "Method": "CreateAuthority",
-    "RelativePath": "api/Authority",
+    "RelativePath": "api/Authority/CreateAuthority",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,8 +27,24 @@
   },
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.AuthorityController",
+    "Method": "GetAuthority",
+    "RelativePath": "api/Authority/GetAuthority/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.AuthorityController",
     "Method": "RemoveAuthority",
-    "RelativePath": "api/Authority",
+    "RelativePath": "api/Authority/RemoveAuthority",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -44,7 +60,7 @@
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.AuthorityController",
     "Method": "UpdateAuthority",
-    "RelativePath": "api/Authority",
+    "RelativePath": "api/Authority/UpdateAuthority",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -58,25 +74,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PeriodicCheck.WebApi.Controllers.AuthorityController",
-    "Method": "GetAuthority",
-    "RelativePath": "api/Authority/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.CareController",
     "Method": "CareList",
-    "RelativePath": "api/Care",
+    "RelativePath": "api/Care/CareList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -86,7 +86,7 @@
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.CareController",
     "Method": "CreateCare",
-    "RelativePath": "api/Care",
+    "RelativePath": "api/Care/CreateCare",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -101,8 +101,24 @@
   },
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.CareController",
+    "Method": "GetCare",
+    "RelativePath": "api/Care/GetCare/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareController",
     "Method": "RemoveCare",
-    "RelativePath": "api/Care",
+    "RelativePath": "api/Care/RemoveCare",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -118,7 +134,7 @@
   {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.CareController",
     "Method": "UpdateCare",
-    "RelativePath": "api/Care",
+    "RelativePath": "api/Care/UpdateCare",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -132,9 +148,35 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareController",
-    "Method": "GetCare",
-    "RelativePath": "api/Care/{id}",
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareDetailController",
+    "Method": "CareDetailList",
+    "RelativePath": "api/CareDetail/CareDetailList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareDetailController",
+    "Method": "CreateCareDetail",
+    "RelativePath": "api/CareDetail/CreateCareDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.CareDetailCommand.CreateCareDetailCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareDetailController",
+    "Method": "GetCareDetail",
+    "RelativePath": "api/CareDetail/GetCareDetail/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -148,7 +190,261 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareDetailController",
+    "Method": "RemoveCareDetail",
+    "RelativePath": "api/CareDetail/RemoveCareDetail",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareDetailController",
+    "Method": "UpdateCareDetail",
+    "RelativePath": "api/CareDetail/UpdateCareDetail",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.CareDetailCommand.UpdateCareDetailCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareReportController",
+    "Method": "CareReportList",
+    "RelativePath": "api/CareReport/CareReportList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareReportController",
+    "Method": "CreateCareReport",
+    "RelativePath": "api/CareReport/CreateCareReport",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.CareReportCommand.CreateCareReportCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareReportController",
+    "Method": "GetCareReport",
+    "RelativePath": "api/CareReport/GetCareReport/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareReportController",
+    "Method": "RemoveCareReport",
+    "RelativePath": "api/CareReport/RemoveCareReport",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CareReportController",
+    "Method": "UpdateCareReport",
+    "RelativePath": "api/CareReport/UpdateCareReport",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.CareReportCommand.UpdateCareReportCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CategoryController",
+    "Method": "CategoryList",
+    "RelativePath": "api/Category/CategoryList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CategoryController",
+    "Method": "CreateCategory",
+    "RelativePath": "api/Category/CreateCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.CategoryCommand.CreateCategoryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CategoryController",
+    "Method": "GetCategory",
+    "RelativePath": "api/Category/GetCategory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CategoryController",
+    "Method": "RemoveCategory",
+    "RelativePath": "api/Category/RemoveCategory",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.CategoryController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Category/UpdateCategory",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.CategoryCommand.UpdateCategoryCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.EquipmentController",
+    "Method": "CreateEquipment",
+    "RelativePath": "api/Equipment/CreateEquipment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.EquipmentCommand.CreateEquipmentCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.EquipmentController",
+    "Method": "EquipmentList",
+    "RelativePath": "api/Equipment/EquipmentList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.EquipmentController",
+    "Method": "GetEquipment",
+    "RelativePath": "api/Equipment/GetEquipment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.EquipmentController",
+    "Method": "RemoveEquipment",
+    "RelativePath": "api/Equipment/RemoveEquipment",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.EquipmentController",
+    "Method": "UpdateEquipment",
+    "RelativePath": "api/Equipment/UpdateEquipment",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.EquipmentCommand.UpdateEquipmentCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.RoleController",
     "Method": "CreateRole",
     "RelativePath": "api/Role/CreateRole",
     "HttpMethod": "POST",
@@ -157,14 +453,14 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "SurveySystem.Application.Features.CQRS.Commands.RoleCommands.CreateRoleCommand",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.RoleCommand.CreateRoleCommand",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.RoleController",
     "Method": "GetRole",
     "RelativePath": "api/Role/GetRole/{id}",
     "HttpMethod": "GET",
@@ -180,7 +476,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.RoleController",
     "Method": "RemoveRole",
     "RelativePath": "api/Role/RemoveRole",
     "HttpMethod": "DELETE",
@@ -196,7 +492,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.RoleController",
     "Method": "RoleList",
     "RelativePath": "api/Role/RoleList",
     "HttpMethod": "GET",
@@ -206,7 +502,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SurveySystem.WebApi.Controllers.RoleController",
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.RoleController",
     "Method": "UpdateRole",
     "RelativePath": "api/Role/UpdateRole",
     "HttpMethod": "PUT",
@@ -215,10 +511,84 @@
     "Parameters": [
       {
         "Name": "command",
-        "Type": "SurveySystem.Application.Features.CQRS.Commands.RoleCommands.UpdateRoleCommand",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.RoleCommand.UpdateRoleCommand",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/User/CreateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.UserCommand.CreateUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/User/GetUser/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.UserController",
+    "Method": "RemoveUser",
+    "RelativePath": "api/User/RemoveUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.UserController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/User/UpdateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.UserCommand.UpdateUserCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.UserController",
+    "Method": "UserList",
+    "RelativePath": "api/User/UserList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

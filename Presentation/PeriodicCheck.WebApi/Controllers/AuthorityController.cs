@@ -6,7 +6,7 @@ using PeriodicCheck.Application.Features.CQRS.Queries.AuthorityQueries;
 
 namespace PeriodicCheck.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AuthorityController : ControllerBase
     {

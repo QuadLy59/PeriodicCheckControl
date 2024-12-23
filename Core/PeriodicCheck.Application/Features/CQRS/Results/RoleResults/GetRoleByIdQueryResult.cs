@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SurveySystem.Application.Features.CQRS.Results.RoleResults
+namespace PeriodicCheck.Application.Features.CQRS.Results.RoleResults
 {
     public class GetRoleByIdQueryResult
     {
@@ -25,6 +25,5 @@ namespace SurveySystem.Application.Features.CQRS.Results.RoleResults
 
         public bool? Is_active { get; set; }
         public bool? Is_deleted { get; set; }
-
     }
 }
