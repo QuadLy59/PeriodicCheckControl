@@ -12,7 +12,8 @@ namespace PeriodicCheck.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(".;initial Catalog=PeriodicCheckDB;integrated Security=true;TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Server=OMR\\SQLEXPRESS;Initial Catalog=PeriodicCheckDB;Integrated Security=True;TrustServerCertificate=True");
+
         }
         public DbSet<Authority> Authorities { get; set; }
         public DbSet<Care> Cares { get; set; }

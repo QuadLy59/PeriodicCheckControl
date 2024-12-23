@@ -518,6 +518,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.StockController",
+    "Method": "CreateStock",
+    "RelativePath": "api/Stock/CreateStock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.StockCommand.CreateStockCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.StockController",
+    "Method": "GetStock",
+    "RelativePath": "api/Stock/GetStock/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.StockController",
+    "Method": "RemoveStock",
+    "RelativePath": "api/Stock/RemoveStock",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.StockController",
+    "Method": "StockList",
+    "RelativePath": "api/Stock/StockList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.StockController",
+    "Method": "UpdateStock",
+    "RelativePath": "api/Stock/UpdateStock",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.StockCommand.UpdateStockCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User/CreateUser",

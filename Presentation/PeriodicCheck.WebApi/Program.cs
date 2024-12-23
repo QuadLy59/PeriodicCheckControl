@@ -5,6 +5,7 @@ using PeriodicCheck.Application.Features.CQRS.Handler.CareReportHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.EquipmentHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.RoleHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.StockHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.UserHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.WarehouseHandler;
 using PeriodicCheck.Application.Interfaces;
@@ -83,6 +84,12 @@ builder.Services.AddScoped<GetWarehouseByIdQueryHandler>();
 builder.Services.AddScoped<CreateWarehouseCommandHandler>();
 builder.Services.AddScoped<RemoveWarehouseCommandHandler>();
 builder.Services.AddScoped<UpdateWarehouseCommandHandler>();
+
+builder.Services.AddScoped<GetStockQueryHandler>();
+builder.Services.AddScoped<GetStockByIdQueryHandler>();
+builder.Services.AddScoped<CreateStockCommandHandler>();
+builder.Services.AddScoped<RemoveStockCommandHandler>();
+builder.Services.AddScoped<UpdateStockCommandHandler>();
 
 
 
