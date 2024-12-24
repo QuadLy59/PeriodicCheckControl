@@ -838,6 +838,125 @@
         }
       }
     },
+    "/api/FaultDetail/FaultDetailList": {
+      "get": {
+        "tags": [
+          "FaultDetail"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FaultDetail/GetFaultDetail/{id}": {
+      "get": {
+        "tags": [
+          "FaultDetail"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FaultDetail/CreateFaultDetail": {
+      "post": {
+        "tags": [
+          "FaultDetail"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaultDetailCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaultDetailCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaultDetailCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FaultDetail/RemoveFaultDetail": {
+      "delete": {
+        "tags": [
+          "FaultDetail"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/FaultDetail/UpdateFaultDetail": {
+      "put": {
+        "tags": [
+          "FaultDetail"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaultDetailCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaultDetailCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaultDetailCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Material/MaterialList": {
       "get": {
         "tags": [
@@ -1788,6 +1907,51 @@
         },
         "additionalProperties": false
       },
+      "CreateFaultDetailCommand": {
+        "type": "object",
+        "properties": {
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "faultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "report_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "report_Person": {
+            "type": "string",
+            "nullable": true
+          },
+          "solution_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "solution_Person": {
+            "type": "string",
+            "nullable": true
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateMaterialCommand": {
         "type": "object",
         "properties": {
@@ -2293,6 +2457,57 @@
             "format": "int32"
           },
           "fault_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateFaultDetailCommand": {
+        "type": "object",
+        "properties": {
+          "faultDetailId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "faultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "report_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "report_Person": {
+            "type": "string",
+            "nullable": true
+          },
+          "solution_Date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "solution_Person": {
             "type": "string",
             "nullable": true
           },
