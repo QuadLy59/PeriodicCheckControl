@@ -444,6 +444,154 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.FaultController",
+    "Method": "CreateFault",
+    "RelativePath": "api/Fault/CreateFault",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.FaultCommand.CreateFaultCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.FaultController",
+    "Method": "FaultList",
+    "RelativePath": "api/Fault/FaultList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.FaultController",
+    "Method": "GetFault",
+    "RelativePath": "api/Fault/GetFault/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.FaultController",
+    "Method": "RemoveFault",
+    "RelativePath": "api/Fault/RemoveFault",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.FaultController",
+    "Method": "UpdateFault",
+    "RelativePath": "api/Fault/UpdateFault",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.FaultCommand.UpdateFaultCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.MaterialController",
+    "Method": "CreateMaterial",
+    "RelativePath": "api/Material/CreateMaterial",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.MaterialCommand.CreateMaterialCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.MaterialController",
+    "Method": "GetMaterial",
+    "RelativePath": "api/Material/GetMaterial/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.MaterialController",
+    "Method": "MaterialList",
+    "RelativePath": "api/Material/MaterialList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.MaterialController",
+    "Method": "RemoveMaterial",
+    "RelativePath": "api/Material/RemoveMaterial",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PeriodicCheck.WebApi.Controllers.MaterialController",
+    "Method": "UpdateMaterial",
+    "RelativePath": "api/Material/UpdateMaterial",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "PeriodicCheck.Application.Features.CQRS.Command.MaterialCommand.UpdateMaterialCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PeriodicCheck.WebApi.Controllers.RoleController",
     "Method": "CreateRole",
     "RelativePath": "api/Role/CreateRole",

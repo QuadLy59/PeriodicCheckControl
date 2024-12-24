@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using PeriodicCheck.Application.Features.CQRS.Command.MaterialCommand;
 using PeriodicCheck.Application.Features.CQRS.Command.RoleCommand;
 using PeriodicCheck.Application.Features.CQRS.Handler.MaterialHandler;
-using PeriodicCheck.Application.Features.CQRS.Queries.MaterialQueries;
 using PeriodicCheck.Application.Features.CQRS.Queries.RoleQueries;
 
 namespace PeriodicCheck.WebApi.Controllers

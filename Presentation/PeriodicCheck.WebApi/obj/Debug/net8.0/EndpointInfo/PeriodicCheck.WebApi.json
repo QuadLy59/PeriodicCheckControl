@@ -719,6 +719,244 @@
         }
       }
     },
+    "/api/Fault/FaultList": {
+      "get": {
+        "tags": [
+          "Fault"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Fault/GetFault/{id}": {
+      "get": {
+        "tags": [
+          "Fault"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Fault/CreateFault": {
+      "post": {
+        "tags": [
+          "Fault"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaultCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaultCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaultCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Fault/RemoveFault": {
+      "delete": {
+        "tags": [
+          "Fault"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Fault/UpdateFault": {
+      "put": {
+        "tags": [
+          "Fault"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaultCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaultCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaultCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Material/MaterialList": {
+      "get": {
+        "tags": [
+          "Material"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Material/GetMaterial/{id}": {
+      "get": {
+        "tags": [
+          "Material"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Material/CreateMaterial": {
+      "post": {
+        "tags": [
+          "Material"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMaterialCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMaterialCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMaterialCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Material/RemoveMaterial": {
+      "delete": {
+        "tags": [
+          "Material"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Material/UpdateMaterial": {
+      "put": {
+        "tags": [
+          "Material"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMaterialCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMaterialCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMaterialCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Role/RoleList": {
       "get": {
         "tags": [
@@ -1513,6 +1751,72 @@
         },
         "additionalProperties": false
       },
+      "CreateFaultCommand": {
+        "type": "object",
+        "properties": {
+          "fault_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "selected_Fault": {
+            "type": "string",
+            "nullable": true
+          },
+          "case": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fault_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateMaterialCommand": {
+        "type": "object",
+        "properties": {
+          "material_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_user": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ins_date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateRoleCommand": {
         "type": "object",
         "properties": {
@@ -1946,6 +2250,84 @@
             "format": "int32"
           },
           "faultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateFaultCommand": {
+        "type": "object",
+        "properties": {
+          "faultId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fault_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "selected_Fault": {
+            "type": "string",
+            "nullable": true
+          },
+          "case": {
+            "type": "string",
+            "nullable": true
+          },
+          "equipmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fault_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "updated_user": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "updated_date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateMaterialCommand": {
+        "type": "object",
+        "properties": {
+          "materialId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "material_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "careId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipmentId": {
             "type": "integer",
             "format": "int32"
           },

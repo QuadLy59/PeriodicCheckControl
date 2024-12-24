@@ -4,6 +4,7 @@ using PeriodicCheck.Application.Features.CQRS.Handler.CareHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.CareReportHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.EquipmentHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.FaultHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.MaterialHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.RoleHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.StockHandler;
@@ -53,6 +54,13 @@ builder.Services.AddScoped<GetCareDetailByIdQueryHandler>();
 builder.Services.AddScoped<CreateCareDetailCommandHandler>();
 builder.Services.AddScoped<RemoveCareDetailCommandHandler>();
 builder.Services.AddScoped<UpdateCareDetailCommandHandler>();
+
+
+builder.Services.AddScoped<GetFaultQueryHandler>();
+builder.Services.AddScoped<GetFaultByIdQueryHandler>();
+builder.Services.AddScoped<CreateFaultCommandHandler>();
+builder.Services.AddScoped<RemoveFaultCommandHandler>();
+builder.Services.AddScoped<UpdateFaultCommandHandler>();
 
 
 
