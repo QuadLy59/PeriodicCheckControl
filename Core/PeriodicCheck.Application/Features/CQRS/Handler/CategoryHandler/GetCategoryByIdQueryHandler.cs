@@ -25,15 +25,14 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler
             {
                 CategoryId=values.CategoryId,
                 CategoryName=values.CategoryName,
-                EquipmentId=values.EquipmentId,
-                CareId=values.CareId,
                 Ins_user = values.Ins_user,
                 Ins_date = values.Ins_date,
                 Updated_user = values.Updated_user,
                 Updated_date = values.Updated_date,
                 Deleted_user = values.Deleted_user,
                 Deleted_date = values.Deleted_date,
-                Is_active = values.Is_active
+                Is_active = values.Is_active,
+                Is_deleted = values.Is_deleted
             };
         }
     }

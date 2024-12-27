@@ -19,8 +19,11 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.FaultHandler
             return values.Select(x => new GetFaultQueryResult
             {
                 FaultId = x.FaultId,
-                Fault_Name = x.Fault_Name,
                 Selected_Fault = x.Selected_Fault,
+                Report_Date = x.Report_Date,
+                Report_Person = x.Report_Person,
+                Solution_Date = x.Solution_Date,
+                Solution_Person = x.Solution_Person,
                 Case = x.Case,
                 Fault_Description = x.Fault_Description,
                 Ins_user = x.Ins_user,

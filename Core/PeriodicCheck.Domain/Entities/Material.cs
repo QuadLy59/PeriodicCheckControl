@@ -14,10 +14,10 @@ namespace PeriodicCheck.Domain.Entities
         public int MaterialId { get; set; }
         public string Material_Name { get; set; }
   
-        public int CareId { get; set; }
+        public int? CareId { get; set; }
         public Care Care { get; set; }
     
-        public int EquipmentId { get; set; }
+        public int? EquipmentId { get; set; }
         public Equipment Equipment { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
@@ -28,6 +28,6 @@ namespace PeriodicCheck.Domain.Entities
         public bool Is_active { get; set; }
         public bool Is_deleted { get; set; }
         public List<CareDetail> CareDetails { get; set; }
-        public List<CareReport> CareReports { get; set; } 
+        public List<CareMaterial> CareMaterials { get; set; } 
     }
 }

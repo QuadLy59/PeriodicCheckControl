@@ -75,15 +75,16 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CareId"));
 
-                    b.Property<DateTime>("Care_Date")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("CareNameId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Care_Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<byte>("Care_Photo")
+                        .HasColumnType("tinyint");
+
                     b.Property<string>("Control_Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("Deleted_date")
@@ -92,7 +93,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Deleted_user")
                         .HasColumnType("int");
 
-                    b.Property<int>("EquipmentId")
+                    b.Property<int?>("EquipmentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -107,10 +108,10 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<bool>("Is_deleted")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("Next_Care_Date")
+                    b.Property<DateTime?>("Next_Care_Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Previ_Care_Date")
+                    b.Property<DateTime?>("Previ_Care_Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Technician")
@@ -125,6 +126,8 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     b.HasKey("CareId");
 
+                    b.HasIndex("CareNameId");
+
                     b.HasIndex("EquipmentId");
 
                     b.ToTable("Cares");
@@ -132,21 +135,20 @@ namespace PeriodicCheck.Persistence.Migrations
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareDetail", b =>
                 {
-                    b.Property<int>("Care_DetailId")
+                    b.Property<int>("CareDetailId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Care_DetailId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CareDetailId"));
 
-                    b.Property<int>("CareId")
+                    b.Property<int?>("CareId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Care_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("CareNameId")
+                        .HasColumnType("int");
 
-                    b.Property<byte>("Care_Photo")
-                        .HasColumnType("tinyint");
+                    b.Property<DateTime?>("Care_Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("Deleted_date")
                         .HasColumnType("datetime2");
@@ -166,7 +168,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<bool>("Is_deleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("MaterialId")
+                    b.Property<int?>("MaterialId")
                         .HasColumnType("int");
 
                     b.Property<string>("Selected_Care")
@@ -179,39 +181,32 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Updated_user")
                         .HasColumnType("int");
 
-                    b.HasKey("Care_DetailId");
+                    b.HasKey("CareDetailId");
 
                     b.HasIndex("CareId");
+
+                    b.HasIndex("CareNameId");
 
                     b.HasIndex("MaterialId");
 
                     b.ToTable("CareDetails");
                 });
 
-            modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareReport", b =>
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareMaterial", b =>
                 {
-                    b.Property<int>("CareReportId")
+                    b.Property<int>("CareMaterialId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CareReportId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CareMaterialId"));
 
-                    b.Property<int>("CareId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CareReportDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CareId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Deleted_date")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("Deleted_user")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EquipmentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -226,7 +221,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<bool>("Is_deleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("MaterialId")
+                    b.Property<int?>("MaterialId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Updated_date")
@@ -235,17 +230,53 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Updated_user")
                         .HasColumnType("int");
 
-                    b.HasKey("CareReportId");
+                    b.HasKey("CareMaterialId");
 
                     b.HasIndex("CareId");
 
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("EquipmentId");
-
                     b.HasIndex("MaterialId");
 
-                    b.ToTable("CareReports");
+                    b.ToTable("CareMaterials");
+                });
+
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareName", b =>
+                {
+                    b.Property<int>("CareNameId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CareNameId"));
+
+                    b.Property<string>("Care_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Deleted_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Deleted_user")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Ins_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Ins_user")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Is_active")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Is_deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Updated_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Updated_user")
+                        .HasColumnType("int");
+
+                    b.HasKey("CareNameId");
+
+                    b.ToTable("CareNames");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Category", b =>
@@ -256,9 +287,6 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
 
-                    b.Property<int>("CareId")
-                        .HasColumnType("int");
-
                     b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -267,9 +295,6 @@ namespace PeriodicCheck.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("Deleted_user")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EquipmentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -292,8 +317,6 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.HasIndex("CareId");
-
                     b.ToTable("Categories");
                 });
 
@@ -305,10 +328,10 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EquipmentId"));
 
-                    b.Property<int>("CareId")
+                    b.Property<int?>("CareId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Company")
@@ -322,10 +345,9 @@ namespace PeriodicCheck.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Equipment_Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FaultId")
+                    b.Property<int?>("FaultId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -355,7 +377,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<bool>("Shift_Turn")
                         .HasColumnType("bit");
 
-                    b.Property<int>("StockId")
+                    b.Property<int?>("StockId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Updated_date")
@@ -364,7 +386,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Updated_user")
                         .HasColumnType("int");
 
-                    b.Property<int>("WarehouseId")
+                    b.Property<int?>("WarehouseId")
                         .HasColumnType("int");
 
                     b.HasKey("EquipmentId");
@@ -394,65 +416,15 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Deleted_user")
                         .HasColumnType("int");
 
-                    b.Property<int>("EquipmentId")
+                    b.Property<int?>("EquipmentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FaultNameId")
                         .HasColumnType("int");
 
                     b.Property<string>("Fault_Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Fault_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Ins_date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("Ins_user")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Is_active")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("Is_deleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Selected_Fault")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("Updated_date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("Updated_user")
-                        .HasColumnType("int");
-
-                    b.HasKey("FaultId");
-
-                    b.HasIndex("EquipmentId");
-
-                    b.ToTable("Faults");
-                });
-
-            modelBuilder.Entity("PeriodicCheck.Domain.Entities.FaultDetail", b =>
-                {
-                    b.Property<int>("FaultDetailId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("Deleted_date")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("Deleted_user")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EquipmentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FaultId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
                         .HasColumnType("datetime2");
@@ -473,6 +445,9 @@ namespace PeriodicCheck.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Selected_Fault")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Solution_Date")
                         .HasColumnType("datetime2");
 
@@ -486,13 +461,101 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Updated_user")
                         .HasColumnType("int");
 
-                    b.HasKey("FaultDetailId");
-
-                    b.HasIndex("CategoryId");
+                    b.HasKey("FaultId");
 
                     b.HasIndex("EquipmentId");
 
+                    b.HasIndex("FaultNameId");
+
+                    b.ToTable("Faults");
+                });
+
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.FaultDetail", b =>
+                {
+                    b.Property<int>("FaultDetailId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Deleted_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Deleted_user")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EquipmentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FaultId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FaultNameId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Ins_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Ins_user")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Is_active")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Is_deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Updated_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Updated_user")
+                        .HasColumnType("int");
+
+                    b.HasKey("FaultDetailId");
+
+                    b.HasIndex("EquipmentId");
+
+                    b.HasIndex("FaultNameId");
+
                     b.ToTable("FaultDetails");
+                });
+
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.FaultName", b =>
+                {
+                    b.Property<int>("FaultNameId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FaultNameId"));
+
+                    b.Property<DateTime?>("Deleted_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Deleted_user")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Fault_Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("Ins_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Ins_user")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Is_active")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Is_deleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("Updated_date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Updated_user")
+                        .HasColumnType("int");
+
+                    b.HasKey("FaultNameId");
+
+                    b.ToTable("FaultNames");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Material", b =>
@@ -503,7 +566,7 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaterialId"));
 
-                    b.Property<int>("CareId")
+                    b.Property<int?>("CareId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Deleted_date")
@@ -512,7 +575,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Deleted_user")
                         .HasColumnType("int");
 
-                    b.Property<int>("EquipmentId")
+                    b.Property<int?>("EquipmentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -599,7 +662,7 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleAuthorityId"));
 
-                    b.Property<int>("AuthorityId")
+                    b.Property<int?>("AuthorityId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Deleted_date")
@@ -620,7 +683,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<bool>("Is_deleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RoleId")
+                    b.Property<int?>("RoleId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Updated_date")
@@ -646,7 +709,7 @@ namespace PeriodicCheck.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StockId"));
 
-                    b.Property<int>("CategoryId")
+                    b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Deleted_date")
@@ -655,7 +718,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Deleted_user")
                         .HasColumnType("int");
 
-                    b.Property<int>("EquipmentId")
+                    b.Property<int?>("EquipmentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -731,7 +794,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int>("RoleAuthorityId")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoleId")
+                    b.Property<int?>("RoleId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Updated_date")
@@ -765,7 +828,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Property<int?>("Deleted_user")
                         .HasColumnType("int");
 
-                    b.Property<int>("EquipmentId")
+                    b.Property<int?>("EquipmentId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Ins_date")
@@ -799,11 +862,17 @@ namespace PeriodicCheck.Persistence.Migrations
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Care", b =>
                 {
+                    b.HasOne("PeriodicCheck.Domain.Entities.CareName", "CareName")
+                        .WithMany("Cares")
+                        .HasForeignKey("CareNameId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("PeriodicCheck.Domain.Entities.Equipment", "Equipment")
                         .WithMany("Cares")
                         .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("CareName");
 
                     b.Navigation("Equipment");
                 });
@@ -813,64 +882,40 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.HasOne("PeriodicCheck.Domain.Entities.Care", "Care")
                         .WithMany("CareDetails")
                         .HasForeignKey("CareId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("PeriodicCheck.Domain.Entities.CareName", "CareName")
+                        .WithMany("CareDetails")
+                        .HasForeignKey("CareNameId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Material", "Material")
                         .WithMany("CareDetails")
                         .HasForeignKey("MaterialId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Care");
+
+                    b.Navigation("CareName");
 
                     b.Navigation("Material");
                 });
 
-            modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareReport", b =>
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareMaterial", b =>
                 {
                     b.HasOne("PeriodicCheck.Domain.Entities.Care", "Care")
-                        .WithMany("CareReports")
+                        .WithMany("CareMaterials")
                         .HasForeignKey("CareId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PeriodicCheck.Domain.Entities.Category", "Category")
-                        .WithMany("CareReports")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PeriodicCheck.Domain.Entities.Equipment", "Equipment")
-                        .WithMany("CareReports")
-                        .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Material", "Material")
-                        .WithMany("CareReports")
+                        .WithMany("CareMaterials")
                         .HasForeignKey("MaterialId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Care");
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Equipment");
 
                     b.Navigation("Material");
-                });
-
-            modelBuilder.Entity("PeriodicCheck.Domain.Entities.Category", b =>
-                {
-                    b.HasOne("PeriodicCheck.Domain.Entities.Care", "Care")
-                        .WithMany("Categories")
-                        .HasForeignKey("CareId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Care");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Equipment", b =>
@@ -878,14 +923,12 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.HasOne("PeriodicCheck.Domain.Entities.Category", "Category")
                         .WithMany("Equipment")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Warehouse", "Warehouse")
                         .WithMany("Equipment")
                         .HasForeignKey("WarehouseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Category");
 
@@ -894,28 +937,21 @@ namespace PeriodicCheck.Persistence.Migrations
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Fault", b =>
                 {
-                    b.HasOne("PeriodicCheck.Domain.Entities.Equipment", "Equipment")
+                    b.HasOne("PeriodicCheck.Domain.Entities.Equipment", null)
                         .WithMany("Faults")
-                        .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("EquipmentId");
 
-                    b.Navigation("Equipment");
+                    b.HasOne("PeriodicCheck.Domain.Entities.FaultName", null)
+                        .WithMany("Faults")
+                        .HasForeignKey("FaultNameId");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.FaultDetail", b =>
                 {
-                    b.HasOne("PeriodicCheck.Domain.Entities.Category", "Category")
-                        .WithMany("FaultDetails")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("PeriodicCheck.Domain.Entities.Equipment", "Equipment")
                         .WithMany("FaultDetails")
                         .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Fault", "Fault")
                         .WithMany("FaultDetails")
@@ -923,26 +959,26 @@ namespace PeriodicCheck.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.HasOne("PeriodicCheck.Domain.Entities.FaultName", "FaultName")
+                        .WithMany("FaultDetails")
+                        .HasForeignKey("FaultNameId");
 
                     b.Navigation("Equipment");
 
                     b.Navigation("Fault");
+
+                    b.Navigation("FaultName");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Material", b =>
                 {
                     b.HasOne("PeriodicCheck.Domain.Entities.Care", "Care")
                         .WithMany("Materials")
-                        .HasForeignKey("CareId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CareId");
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Equipment", "Equipment")
                         .WithMany("Materials")
-                        .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EquipmentId");
 
                     b.Navigation("Care");
 
@@ -954,14 +990,12 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.HasOne("PeriodicCheck.Domain.Entities.Authority", "Authority")
                         .WithMany("RoleAuthorities")
                         .HasForeignKey("AuthorityId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Role", "Role")
                         .WithMany("RoleAuthorities")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Authority");
 
@@ -973,14 +1007,12 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.HasOne("PeriodicCheck.Domain.Entities.Category", "Category")
                         .WithMany("Stocks")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PeriodicCheck.Domain.Entities.Equipment", "Equipment")
                         .WithMany("Stocks")
                         .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Category");
 
@@ -1004,8 +1036,7 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.HasOne("PeriodicCheck.Domain.Entities.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Authority");
 
@@ -1018,9 +1049,7 @@ namespace PeriodicCheck.Persistence.Migrations
                 {
                     b.HasOne("PeriodicCheck.Domain.Entities.Equipment", null)
                         .WithMany("Warehouses")
-                        .HasForeignKey("EquipmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EquipmentId");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Authority", b =>
@@ -1034,28 +1063,27 @@ namespace PeriodicCheck.Persistence.Migrations
                 {
                     b.Navigation("CareDetails");
 
-                    b.Navigation("CareReports");
-
-                    b.Navigation("Categories");
+                    b.Navigation("CareMaterials");
 
                     b.Navigation("Materials");
                 });
 
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.CareName", b =>
+                {
+                    b.Navigation("CareDetails");
+
+                    b.Navigation("Cares");
+                });
+
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Category", b =>
                 {
-                    b.Navigation("CareReports");
-
                     b.Navigation("Equipment");
-
-                    b.Navigation("FaultDetails");
 
                     b.Navigation("Stocks");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Equipment", b =>
                 {
-                    b.Navigation("CareReports");
-
                     b.Navigation("Cares");
 
                     b.Navigation("FaultDetails");
@@ -1074,11 +1102,18 @@ namespace PeriodicCheck.Persistence.Migrations
                     b.Navigation("FaultDetails");
                 });
 
+            modelBuilder.Entity("PeriodicCheck.Domain.Entities.FaultName", b =>
+                {
+                    b.Navigation("FaultDetails");
+
+                    b.Navigation("Faults");
+                });
+
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Material", b =>
                 {
                     b.Navigation("CareDetails");
 
-                    b.Navigation("CareReports");
+                    b.Navigation("CareMaterials");
                 });
 
             modelBuilder.Entity("PeriodicCheck.Domain.Entities.Role", b =>

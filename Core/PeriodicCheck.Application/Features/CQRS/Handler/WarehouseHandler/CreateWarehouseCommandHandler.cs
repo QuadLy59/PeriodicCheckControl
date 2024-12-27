@@ -19,7 +19,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.WarehouseHandler
             await _repository.CreateAsync(new Warehouse
             {
                 Warehouse_Name = command.Warehouse_Name,
-                EquipmentId = command.EquipmentId,
                 Ins_user = command.Ins_user,
                 Ins_date = command.Ins_date,
                 Deleted_date = command.Deleted_date,

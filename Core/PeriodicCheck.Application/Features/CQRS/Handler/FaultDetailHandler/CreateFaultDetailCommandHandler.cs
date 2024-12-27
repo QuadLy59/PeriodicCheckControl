@@ -19,12 +19,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.FaultDetailHandler
             await _repository.CreateAsync(new FaultDetail
             {
                 EquipmentId = command.EquipmentId,
-                CategoryId = command.CategoryId,
                 FaultId = command.FaultId,
-                Report_Date = command.Report_Date,
-                Report_Person = command.Report_Person,
-                Solution_Date = command.Solution_Date,
-                Solution_Person = command.Solution_Person,
+
                 Ins_user = command.Ins_user,
                 Ins_date = command.Ins_date,
                 Is_active = command.Is_active,

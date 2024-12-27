@@ -20,7 +20,7 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.AuthorityHandler
         public async Task Handle(UpdateAuthorityCommand command)
         {
             var values = await _repository.GetByIdAsync(command.Authority_id);
-            values.AuthorityName = command.Authority_Name;
+            values.AuthorityName = command.AuthorityName;
             values.Description = command.Description;
             values.Ins_user= command.Ins_user;
             values.Ins_date = command.Ins_date;

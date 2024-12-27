@@ -11,7 +11,7 @@ namespace PeriodicCheck.Application.Features.CQRS.Command.AuthorityCommand
     {
         [Key]
         public int Authority_id { get; set; }
-        public string Authority_Name { get; set; }
+        public string AuthorityName { get; set; }
         public string Description { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }

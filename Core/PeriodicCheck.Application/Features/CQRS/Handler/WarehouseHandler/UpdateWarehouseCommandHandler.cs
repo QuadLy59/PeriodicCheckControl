@@ -18,7 +18,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.WarehouseHandler
         {
             var values = await _repository.GetByIdAsync(command.WarehouseId);
             values.Warehouse_Name = command.Warehouse_Name;
-            values.EquipmentId = command.EquipmentId;
             values.Ins_user = command.Ins_user;
             values.Ins_date = command.Ins_date;
             values.Updated_date = command.Updated_date;

@@ -13,9 +13,9 @@ namespace PeriodicCheck.Domain.Entities
         [Key]
         public int RoleAuthorityId { get; set; }
 
-        public int RoleId { get; set; }
+        public int? RoleId { get; set; }
 
-        public int AuthorityId { get; set; }
+        public int? AuthorityId { get; set; }
         public Role Role { get; set; }
         public Authority Authority { get; set; }
         public List<User> Users { get; set; }

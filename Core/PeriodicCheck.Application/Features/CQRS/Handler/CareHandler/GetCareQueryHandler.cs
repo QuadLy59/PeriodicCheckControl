@@ -22,15 +22,16 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CareHandler
             var values = await _repository.GetAllAsync();
             return values.Select(x => new GetCareQueryResult
             {
-                Care_id = x.CareId,
-                Equipment_id = x.EquipmentId,
-                Care_Date=x.Care_Date,
+                CareId = x.CareId,
+                EquipmentId = x.EquipmentId,
+
                 Technician=x.Technician,
                 Next_Care_Date=x.Next_Care_Date,
                 Previ_Care_Date=x.Previ_Care_Date,
                 Control_Type=x.Control_Type,
                 Care_Description=x.Care_Description,
-                Ins_date=x.Ins_date,
+                Care_Photo = x.Care_Photo,
+                Ins_date =x.Ins_date,
                 Ins_user=x.Ins_user,
                 Updated_date=x.Updated_date,
                 Updated_user=x.Updated_user,

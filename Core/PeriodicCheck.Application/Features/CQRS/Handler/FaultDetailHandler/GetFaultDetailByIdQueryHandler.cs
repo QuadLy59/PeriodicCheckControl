@@ -22,12 +22,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.FaultDetailHandler
             {
                 FaultDetailId = values.FaultDetailId,
                 EquipmentId = values.EquipmentId,
-                CategoryId = values.CategoryId,
                 FaultId = values.FaultId,
-                Report_Date = values.Report_Date,
-                Report_Person = values.Report_Person,
-                Solution_Date = values.Solution_Date,
-                Solution_Person = values.Solution_Person,
+
                 Ins_user = values.Ins_user,
                 Ins_date = values.Ins_date,
                 Updated_user = values.Updated_user,

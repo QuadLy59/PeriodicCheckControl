@@ -23,7 +23,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.WarehouseHandler
             {
                 WarehouseId = x.WarehouseId,
                 Warehouse_Name = x.Warehouse_Name,
-                EquipmentId = x.EquipmentId,
                 Ins_date = x.Ins_date,
                 Ins_user = x.Ins_user,
                 Deleted_date = x.Deleted_date,

@@ -7,8 +7,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Results.StockResults
     {
         [Key]
         public int StockId { get; set; }
-        public int EquipmentId { get; set; }
-        public int CategoryId { get; set; }
+        public int? EquipmentId { get; set; }
+        public int? CategoryId { get; set; }
 
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }

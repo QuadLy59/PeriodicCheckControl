@@ -18,12 +18,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.FaultDetailHandler
         {
             var values = await _repository.GetByIdAsync(command.FaultDetailId);
             values.EquipmentId = command.EquipmentId;
-            values.CategoryId = command.CategoryId;
             values.FaultId = command.FaultId;
-            values.Report_Date = command.Report_Date;
-            values.Report_Person = command.Report_Person;
-            values.Solution_Date = command.Solution_Date;
-            values.Solution_Person = command.Solution_Person;
+
             values.Updated_user = command.Updated_user;
             values.Updated_date = command.Updated_date;
             values.Is_active = command.Is_active;

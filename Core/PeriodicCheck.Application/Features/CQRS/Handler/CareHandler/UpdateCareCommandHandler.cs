@@ -21,12 +21,13 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CareHandler
         {
             var values = await _repository.GetByIdAsync(command.Care_id);
             values.EquipmentId=command.Equipment_id;
-            values.Care_Date = command.Care_Date;
+
             values.Technician = command.Technician;
             values.Next_Care_Date= command.Next_Care_Date;
             values.Previ_Care_Date = command.Previ_Care_Date;
             values.Control_Type = command.Control_Type;
             values.Care_Description = command.Care_Description;
+            values.Care_Photo = command.Care_Photo;
             values.Ins_date = command.Ins_date;
             values.Ins_user = command.Ins_user;
             values.Deleted_date=command.Deleted_date;

@@ -1,12 +1,15 @@
 using PeriodicCheck.Application.Features.CQRS.Handler.AuthorityHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.CareDetailHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.CareHandler;
-using PeriodicCheck.Application.Features.CQRS.Handler.CareReportHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.CareMaterialHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.CareNameHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.EquipmentHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.FaultDetailHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.FaultHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.FaultNameHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.MaterialHandler;
+using PeriodicCheck.Application.Features.CQRS.Handler.RoleAuthorityHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.RoleHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.StockHandler;
 using PeriodicCheck.Application.Features.CQRS.Handler.UserHandler;
@@ -34,13 +37,6 @@ builder.Services.AddScoped<CreateCareCommandHandler>();
 builder.Services.AddScoped<RemoveCareCommandHandler>();
 builder.Services.AddScoped<UpdateCareCommandHandler>();
 
-builder.Services.AddScoped<GetFaultDetailQueryHandler>();
-builder.Services.AddScoped<GetFaultDetailByIdQueryHandler>();
-builder.Services.AddScoped<CreateFaultDetailCommandHandler>();
-builder.Services.AddScoped<UpdateFaultDetailCommandHandler>();
-builder.Services.AddScoped<RemoveFaultDetailCommandHandler>();
-
-
 
 builder.Services.AddScoped<GetUserQueryHandler>();
 builder.Services.AddScoped<GetUserByIdQueryHandler>();
@@ -63,22 +59,11 @@ builder.Services.AddScoped<CreateCareDetailCommandHandler>();
 builder.Services.AddScoped<RemoveCareDetailCommandHandler>();
 builder.Services.AddScoped<UpdateCareDetailCommandHandler>();
 
-
-builder.Services.AddScoped<GetFaultQueryHandler>();
-builder.Services.AddScoped<GetFaultByIdQueryHandler>();
-builder.Services.AddScoped<CreateFaultCommandHandler>();
-builder.Services.AddScoped<RemoveFaultCommandHandler>();
-builder.Services.AddScoped<UpdateFaultCommandHandler>();
-
-
-
-
-builder.Services.AddScoped<GetCareReportQueryHandler>();
-builder.Services.AddScoped<GetCareReportByIdQueryHandler>();
-builder.Services.AddScoped<CreateCareReportCommandHandler>();
-builder.Services.AddScoped<RemoveCareReportCommandHandler>();
-builder.Services.AddScoped<UpdateCareReportCommandHandler>();
-
+builder.Services.AddScoped<GetFaultNameQueryHandler>();
+builder.Services.AddScoped<GetFaultNameByIdQueryHandler>();
+builder.Services.AddScoped<CreateFaultNameCommandHandler>();
+builder.Services.AddScoped<RemoveFaultNameCommandHandler>();
+builder.Services.AddScoped<UpdateFaultNameCommandHandler>();
 
 
 builder.Services.AddScoped<GetCategoryQueryHandler>();
@@ -95,6 +80,12 @@ builder.Services.AddScoped<CreateEquipmentCommandHandler>();
 builder.Services.AddScoped<RemoveEquipmentCommandHandler>();
 builder.Services.AddScoped<UpdateEquipmentCommandHandler>();
 
+
+builder.Services.AddScoped<GetFaultDetailQueryHandler>();
+builder.Services.AddScoped<GetFaultDetailByIdQueryHandler>();
+builder.Services.AddScoped<CreateFaultDetailCommandHandler>();
+builder.Services.AddScoped<UpdateFaultDetailCommandHandler>();
+builder.Services.AddScoped<RemoveFaultDetailCommandHandler>();
 
 builder.Services.AddScoped<GetWarehouseQueryHandler>();
 builder.Services.AddScoped<GetWarehouseByIdQueryHandler>();
@@ -116,6 +107,34 @@ builder.Services.AddScoped<UpdateMaterialCommandHandler>();
 
 
 
+builder.Services.AddScoped<GetFaultQueryHandler>();
+builder.Services.AddScoped<GetFaultByIdQueryHandler>();
+builder.Services.AddScoped<CreateFaultCommandHandler>();
+builder.Services.AddScoped<RemoveFaultCommandHandler>();
+builder.Services.AddScoped<UpdateFaultCommandHandler>();
+
+
+builder.Services.AddScoped<GetRoleAuthorityQueryHandler>();
+builder.Services.AddScoped<GetRoleAuthorityByIdQueryHandler>();
+builder.Services.AddScoped<CreateRoleAuthorityCommandHandler>();
+builder.Services.AddScoped<RemoveRoleAuthorityCommandHandler>();
+builder.Services.AddScoped<UpdateRoleAuthorityCommandHandler>();
+
+
+
+builder.Services.AddScoped<GetCareMaterialByIdQueryHandler>();
+builder.Services.AddScoped<GetCareMaterialQueryHandler>();
+builder.Services.AddScoped<CreateCareMaterialCommandHandler>();
+builder.Services.AddScoped<RemoveCareMaterialCommandHandler>();
+builder.Services.AddScoped<UpdateCareMaterialCommandHandler>();
+
+
+
+builder.Services.AddScoped<GetCareNameByIdQueryHandler>();
+builder.Services.AddScoped<GetCareNameQueryHandler>();
+builder.Services.AddScoped<CreateCareNameCommandHandler>();
+builder.Services.AddScoped<RemoveCareNameCommandHandler>();
+builder.Services.AddScoped<UpdateCareNameCommandHandler>();
 
 
 builder.Services.AddControllers();

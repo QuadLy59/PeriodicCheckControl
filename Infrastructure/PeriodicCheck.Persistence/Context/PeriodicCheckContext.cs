@@ -12,17 +12,18 @@ namespace PeriodicCheck.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=OMR\\SQLEXPRESS;Initial Catalog=PeriodicCheckDB;Integrated Security=True;TrustServerCertificate=True");
-
+            optionsBuilder.UseSqlServer("Server=.;initial Catalog=PeriodicCheckDB;integrated Security=true;TrustServerCertificate=true");
         }
         public DbSet<Authority> Authorities { get; set; }
         public DbSet<Care> Cares { get; set; }
         public DbSet<CareDetail> CareDetails { get; set; }
-        public DbSet<CareReport> CareReports { get; set; }
+        public DbSet<CareMaterial> CareMaterials { get; set; }
+        public DbSet<CareName> CareNames { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Equipment> Equipment { get; set; }
         public DbSet<Fault> Faults { get; set; }
         public DbSet<FaultDetail> FaultDetails { get; set; }
+        public DbSet<FaultName> FaultNames { get; set; }
         public DbSet<Material> Materials { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<RoleAuthority> RoleAuthorities { get; set; }
@@ -64,31 +65,41 @@ namespace PeriodicCheck.Persistence.Context
                 .HasForeignKey(cd => cd.MaterialId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // CareReport
-            modelBuilder.Entity<CareReport>()
-                .HasOne(cr => cr.Care)
-                .WithMany(c => c.CareReports)
-                .HasForeignKey(cr => cr.CareId)
+            modelBuilder.Entity<CareDetail>()
+                .HasOne(cd => cd.CareName)
+                .WithMany(cn => cn.CareDetails)
+                .HasForeignKey(cd => cd.CareNameId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<CareReport>()
-                .HasOne(cr => cr.Equipment)
-                .WithMany(e => e.CareReports)
-                .HasForeignKey(cr => cr.EquipmentId)
+
+            // CareMaterial ile Care ilişkilendirme
+            modelBuilder.Entity<CareMaterial>()
+                .HasOne(cm => cm.Care)
+                .WithMany(c => c.CareMaterials)
+                .HasForeignKey(cm => cm.CareId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<CareReport>()
-                .HasOne(cr => cr.Category)
-                .WithMany(c => c.CareReports)
-                .HasForeignKey(cr => cr.CategoryId)
+            // CareMaterial ile Material ilişkilendirme
+            modelBuilder.Entity<CareMaterial>()
+                .HasOne(cm => cm.Material)
+                .WithMany(m => m.CareMaterials)
+                .HasForeignKey(cm => cm.MaterialId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Fault
-            modelBuilder.Entity<Fault>()
-                .HasOne(f => f.Equipment)
-                .WithMany(e => e.Faults)
-                .HasForeignKey(f => f.EquipmentId)
+            // CareName ile Care ilişkilendirme
+            modelBuilder.Entity<Care>()
+                .HasOne(c => c.CareName)
+                .WithMany(cn => cn.Cares)
+                .HasForeignKey(c => c.CareNameId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+
+            //// Fault
+            //modelBuilder.Entity<Fault>()
+            //    .HasOne(f => f.Equipment)
+            //    .WithMany(e => e.Faults)
+            //    .HasForeignKey(f => f.EquipmentId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
             // FaultDetail
             modelBuilder.Entity<FaultDetail>()
@@ -103,18 +114,18 @@ namespace PeriodicCheck.Persistence.Context
                 .HasForeignKey(fd => fd.EquipmentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<FaultDetail>()
-                .HasOne(fd => fd.Category)
-                .WithMany(c => c.FaultDetails)
-                .HasForeignKey(fd => fd.CategoryId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //modelBuilder.Entity<FaultDetail>()
+            //    .HasOne(fd => fd.Category)
+            //    .WithMany(c => c.FaultDetails)
+            //    .HasForeignKey(fd => fd.CategoryId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
-            // Equipment
-            modelBuilder.Entity<Equipment>()
-                .HasOne(e => e.Warehouse)
-                .WithMany(w => w.Equipment)
-                .HasForeignKey(e => e.WarehouseId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //// Equipment
+            //modelBuilder.Entity<Equipment>()
+            //    .HasOne(e => e.Warehouse)
+            //    .WithMany(w => w.Equipment)
+            //    .HasForeignKey(e => e.WarehouseId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Equipment>()
                 .HasOne(e => e.Category)

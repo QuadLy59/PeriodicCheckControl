@@ -22,13 +22,14 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CareHandler
             await _repository.CreateAsync(new Care
             {
                 EquipmentId= command.Equipment_id,
-                Care_Date=command.Care_Date,
+
                 Technician=command.Technician,
                 Next_Care_Date=command.Next_Care_Date,
                 Previ_Care_Date=command.Previ_Care_Date,
                 Control_Type=command.Control_Type,
                 Care_Description=command.Care_Description,
-                Ins_date=command.Ins_date,
+                Care_Photo = command.Care_Photo,
+                Ins_date =command.Ins_date,
                 Ins_user=command.Ins_user,
                 Updated_date=command.Updated_date,
                 Updated_user=command.Updated_user,

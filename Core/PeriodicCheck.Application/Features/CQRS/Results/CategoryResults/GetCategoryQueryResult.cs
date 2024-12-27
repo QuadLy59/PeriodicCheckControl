@@ -12,8 +12,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Results.CategoryResults
         [Key]
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
-        public int EquipmentId { get; set; }
-        public int CareId { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }
         public int? Updated_user { get; set; }

@@ -13,7 +13,7 @@ namespace PeriodicCheck.Domain.Entities
         [Key]
         public int UserId { get; set; }
 
-        public int RoleId { get; set; }
+        public int? RoleId { get; set; }
         public Role Role { get; set; }
         public RoleAuthority RoleAuthority { get; set; }
         public Authority Authority { get; set; }

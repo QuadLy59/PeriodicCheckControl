@@ -7,10 +7,13 @@ namespace PeriodicCheck.Application.Features.CQRS.Results.FaultResults
     {
         [Key]
         public int FaultId { get; set; }
-        public string Fault_Name { get; set; }
         public string Selected_Fault { get; set; }
         public string Case { get; set; }
         public string Fault_Description { get; set; }
+        public DateTime Report_Date { get; set; }
+        public string Report_Person { get; set; }
+        public DateTime Solution_Date { get; set; }
+        public string Solution_Person { get; set; }
 
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }

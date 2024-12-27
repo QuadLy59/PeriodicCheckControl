@@ -19,12 +19,12 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CareDetailHandler
         }
         public async Task Handle(UpdateCareDetailCommand command)
         {
-            var values = await _repository.GetByIdAsync(command.Care_DetailId);
-            values.CareId = command.Care_DetailId;
+            var values = await _repository.GetByIdAsync(command.CareDetailId);
+            values.CareId = command.CareId;
             values.MaterialId = command.MaterialId;
-            values.Care_Name = command.Care_Name;
+            values.CareNameId = command.CareNameId;
             values.Selected_Care = command.Selected_Care;
-            values.Care_Photo= command.Care_Photo;
+            values.Care_Date = command.Care_Date;
             values.Updated_user = command.Updated_user;
             values.Updated_date = command.Updated_date;
             values.Is_active = command.Is_active;

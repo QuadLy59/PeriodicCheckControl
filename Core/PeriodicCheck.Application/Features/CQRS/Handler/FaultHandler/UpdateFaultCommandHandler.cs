@@ -16,10 +16,12 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.FaultHandler
         public async Task Handle(UpdateFaultCommand command)
         {
             var values = await _repository.GetByIdAsync(command.FaultId);
-            values.Fault_Name = command.Fault_Name;
             values.Selected_Fault = command.Selected_Fault;
+            values.Report_Date = command.Report_Date;
+            values.Report_Person = command.Report_Person;
+            values.Solution_Date = command.Solution_Date;
+            values.Solution_Person = command.Solution_Person;
             values.Case = command.Case;
-            values.EquipmentId = command.EquipmentId;
             values.Fault_Description = command.Fault_Description;
             values.Updated_user = command.Updated_user;
             values.Updated_date = command.Updated_date;

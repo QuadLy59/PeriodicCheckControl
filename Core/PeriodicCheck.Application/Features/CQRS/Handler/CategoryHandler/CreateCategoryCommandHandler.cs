@@ -22,8 +22,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler
             await _repository.CreateAsync(new Category
             {
                 CategoryName = command.CategoryName,
-                EquipmentId = command.EquipmentId,
-                CareId = command.CareId,
                 Ins_user = command.Ins_user,
                 Ins_date = command.Ins_date,
                 Is_active = command.Is_active

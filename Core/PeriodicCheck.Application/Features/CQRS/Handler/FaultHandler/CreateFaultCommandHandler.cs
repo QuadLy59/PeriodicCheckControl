@@ -18,10 +18,12 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.FaultHandler
         {
             await _repository.CreateAsync(new Fault
             {
-                Fault_Name = command.Fault_Name,
                 Selected_Fault = command.Selected_Fault,
+                Report_Date = command.Report_Date,
+                Report_Person = command.Report_Person,
+                Solution_Date = command.Solution_Date,
+                Solution_Person = command.Solution_Person,
                 Case = command.Case,
-                EquipmentId = command.EquipmentId,
                 Fault_Description = command.Fault_Description,
                 Ins_user = command.Ins_user,
                 Ins_date = command.Ins_date,

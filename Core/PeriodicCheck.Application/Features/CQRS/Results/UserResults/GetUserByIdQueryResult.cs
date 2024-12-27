@@ -11,7 +11,7 @@ namespace PeriodicCheck.Application.Features.CQRS.Results.UserResults
     {
         [Key]
         public int UserId { get; set; }
-        public int RoleId { get; set; }
+        public int? RoleId { get; set; }
         public string Name_And_Surname { get; set; }
         public int Phone_Number { get; set; }
         public string Email { get; set; }

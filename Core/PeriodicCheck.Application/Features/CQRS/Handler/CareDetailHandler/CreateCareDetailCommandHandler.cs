@@ -23,10 +23,10 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CareDetailHandler
             {
                 CareId=command.CareId,
                 MaterialId=command.MaterialId,
-                Care_Name=command.Care_Name,
+                CareNameId=command.CareNameId,
                 Selected_Care=command.Selected_Care,
-                Care_Photo=command.Care_Photo,
-                Ins_date=command.Ins_date,
+                Care_Date = command.Care_Date,
+                Ins_date =command.Ins_date,
                 Ins_user=command.Ins_user,
                 Is_active=command.Is_active
             });

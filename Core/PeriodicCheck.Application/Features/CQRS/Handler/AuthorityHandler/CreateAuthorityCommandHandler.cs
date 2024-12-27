@@ -21,7 +21,7 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.AuthorityHandler
         {
             await _repository.CreateAsync(new Authority
             {
-                AuthorityName= command.Authority_Name,
+                AuthorityName= command.AuthorityName,
                 Description=command.Description,
                 Ins_user=command.Ins_user,
                 Ins_date=command.Ins_date,

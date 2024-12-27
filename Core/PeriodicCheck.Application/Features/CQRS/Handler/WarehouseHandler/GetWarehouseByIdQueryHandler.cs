@@ -22,7 +22,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.WarehouseHandler
             {
                 WarehouseId = values.WarehouseId,
                 Warehouse_Name = values.Warehouse_Name,
-                EquipmentId = values.EquipmentId,
                 Ins_date = values.Ins_date,
                 Ins_user = values.Ins_user,
                 Updated_user = values.Updated_user,

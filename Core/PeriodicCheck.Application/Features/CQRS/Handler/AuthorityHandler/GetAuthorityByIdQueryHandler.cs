@@ -23,8 +23,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.AuthorityHandler
             var values= await _repository.GetByIdAsync(query.Id);
             return new GetAuthorityByIdQueryResult
             {
-                Authority_id=values.AuthorityId,
-                Authority_Name=values.AuthorityName,
+                AuthorityId=values.AuthorityId,
+                AuthorityName=values.AuthorityName,
                 Description=values.Description,
                 Ins_date=values.Ins_date,
                 Ins_user=values.Ins_user,

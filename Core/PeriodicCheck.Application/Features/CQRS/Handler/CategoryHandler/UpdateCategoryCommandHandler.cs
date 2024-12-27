@@ -21,8 +21,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler
         {
             var values = await _repository.GetByIdAsync(command.CategoryId);
             values.CategoryName=command.CategoryName;
-            values.EquipmentId=command.EquipmentId;
-            values.CareId=command.CareId;
             values.Updated_user = command.Updated_user;
             values.Updated_date = command.Updated_date;
             values.Is_active = command.Is_active;

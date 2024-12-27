@@ -24,8 +24,6 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CategoryHandler
             {
                 CategoryId = x.CategoryId,
                 CategoryName = x.CategoryName,
-                EquipmentId = x.EquipmentId,
-                CareId = x.CareId,
                 Ins_user = x.Ins_user,
                 Ins_date = x.Ins_date,
                 Updated_user = x.Updated_user,

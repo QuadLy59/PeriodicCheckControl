@@ -9,8 +9,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Results.MaterialResults
         public int MaterialId { get; set; }
         public string Material_Name { get; set; }
 
-        public int CareId { get; set; }
-        public int EquipmentId { get; set; }
+        public int? CareId { get; set; }
+        public int? EquipmentId { get; set; }
 
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }

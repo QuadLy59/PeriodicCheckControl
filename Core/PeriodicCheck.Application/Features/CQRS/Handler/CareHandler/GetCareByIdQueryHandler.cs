@@ -23,15 +23,16 @@ namespace PeriodicCheck.Application.Features.CQRS.Handler.CareHandler
             var values = await _repository.GetByIdAsync(query.Id);
             return new GetCareByIdQueryResult
             {
-                Care_id=values.CareId,
-                Equipment_id=values.EquipmentId,
-                Care_Date=values.Care_Date,
+                CareId=values.CareId,
+                EquipmentId=values.EquipmentId,
+
                 Technician=values.Technician,
                 Next_Care_Date=values.Next_Care_Date,
                 Previ_Care_Date=values.Previ_Care_Date,
                 Control_Type=values.Control_Type,
                 Care_Description=values.Care_Description,
-                Ins_user=values.Ins_user,
+                Care_Photo = values.Care_Photo,
+                Ins_user =values.Ins_user,
                 Ins_date=values.Ins_date,
                 Updated_date=values.Updated_date,
                 Updated_user=values.Updated_user,

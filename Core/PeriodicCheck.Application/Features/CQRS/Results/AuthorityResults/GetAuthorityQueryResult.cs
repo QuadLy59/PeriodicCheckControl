@@ -10,8 +10,8 @@ namespace PeriodicCheck.Application.Features.CQRS.Results.AuthorityResults
     public class GetAuthorityQueryResult
     {
         [Key]
-        public int Authority_id { get; set; }
-        public string Authority_Name { get; set; }
+        public int AuthorityId { get; set; }
+        public string AuthorityName { get; set; }
         public string Description { get; set; }
         public int? Ins_user { get; set; }
         public DateTime? Ins_date { get; set; }

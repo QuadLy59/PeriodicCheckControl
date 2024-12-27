@@ -13,9 +13,9 @@ namespace PeriodicCheck.Domain.Entities
         [Key]
         public int StockId { get; set; }
 
-        public int EquipmentId { get; set; }
+        public int? EquipmentId { get; set; }
  
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         public Equipment Equipment { get; set; }
         public Category Category { get; set; }
         public int? Ins_user { get; set; }
